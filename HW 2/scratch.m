@@ -28,8 +28,8 @@ cssv = kron(css,ones(T,1));
 k=kssv; %initialize the capital vector with the initial steady state
 y=yssv; %initialize the output vector with the initial steady state
 
-%Set capital at half SS level and then simulate 100 periods
-k(1,:)=k(1,:)/2;
+%Simulate T periods
+
 for t=1:T
     y(t,:)=k(t,:).^alpha; %production
     c(t,:)=(1-s).*y(t,:); %production
